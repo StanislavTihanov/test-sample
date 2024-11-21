@@ -1,0 +1,77 @@
+.header {
+    &__top {
+        margin: 50px 0px;
+        @include table {
+            margin: 20px 0px;
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0px;
+        margin-bottom: 90px;
+        @include table {
+            margin-bottom: 0px;
+            justify-content: end;
+        }
+    }
+    &__logo {
+        z-index: 3; 
+    }
+    &__links {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+.menu {
+    width: 100%;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 30px;
+    }
+    &__link {
+        line-height: 17px;
+        position: relative;
+        @include fluid-text(18, 24);
+        font-family: var(--font-family-Poppins);
+        &:hover {
+            font-weight: 600;
+        }
+    }
+    @include mobile {
+        position: fixed;
+        left: 0;
+        top: -100%;
+        width: 100%;
+        height: 100%;
+        background: blueviolet;
+        padding: 100px 30px 30px 30px; 
+        transition: All 0.5s ease 0s;
+        overflow: auto;
+        z-index: 9;
+
+        &._active {
+            top: 0;
+        }
+        &__list-item:not(:last-child){
+            margin-bottom: 30px;
+        }
+        ul {
+            display: block;
+            text-align: center;
+            position: relative;
+            color: var(--color-white);
+        }
+        ul li {
+            margin-bottom: 20px;
+        }
+    }
+}

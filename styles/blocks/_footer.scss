@@ -1,0 +1,59 @@
+.footer {
+    padding: 75px 0px;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    @include mobile {
+        padding: 30px 0px;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &__block {
+        flex-basis: 490px;
+    }
+    &__title {
+        margin-bottom: 40px;
+        @include fluid-text(24,32);
+        text-transform: uppercase;
+    }
+    &__label {
+        position: relative;
+        &_input {
+            width: 100%;
+            padding: 35px 30px;
+            background-color: inherit;
+            color: var(--color-white);
+            border: 2px solid #f5f3ed;
+            border-radius: 2px;
+            @include fluid-text(14,20);
+            &::placeholder {
+                color: var(--color-white);
+            }
+        }
+        &_icon {
+            position: absolute;
+            right: 30px;
+            top: -15px;
+        }
+    }
+    &__nav {
+        ul li {
+            @include fluid-text(18,24);
+            &:not(:last-child) {
+               margin-bottom: 37px;
+            }
+        }
+    }
+    &__contact {
+        &:not(:last-child) {
+            margin-bottom: 45px;
+        }
+        &:last-child {
+            @include fluid-text(14,20);
+        }
+    }
+}

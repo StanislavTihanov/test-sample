@@ -1,0 +1,71 @@
+body.lock {
+    overflow: hidden;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.main {
+    flex: 1 1 auto;
+}
+._container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding-x);
+}
+._ibg {
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+.title {
+    @include fluid-text(50, 72);
+    line-height: 100%;
+    color: var(--color-red);
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+    @include mobile {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    &::after {
+     position: absolute;
+     content: '';
+     width: 312px;
+     height: 4px;
+     bottom: 0;
+     left: 0;
+     background-color: var(--color-green);
+    }
+}
+.subtitle {
+    @include fluid-text(32, 18);
+    line-height: 100%;
+    color: var(--color-white);
+}
+.button {
+    border: 3px solid var(--color-green);
+    border-radius: 12px;
+    padding: 30px 50px;
+    color: var(--color-black);
+    @include fluid-text(24, 32);
+    font-family: var(--font-family-PlayfairDisplaySC);
+    font-weight: 700;
+    display: inline-block;
+}
+section {
+    padding: var(--section-padding-y) 0px;
+    @include table {
+        padding: 20px 0px;
+    }
+}

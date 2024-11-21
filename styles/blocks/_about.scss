@@ -1,0 +1,44 @@
+.about {
+    margin-bottom: 100px;
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include table {
+            flex-wrap: wrap;
+        }
+    }
+    &__info {
+        flex-basis: 415px;
+    }
+    &__text {
+        @include fluid-text(20, 28);
+        margin-bottom: 60px;
+        @include table {
+            margin-bottom: 20px;
+        }
+    }
+    &__button {
+        .button {
+            color: var(--color-white);
+            background-color: var(--color-green);
+            transition: all 0.3s;
+            &:hover {
+                background-color: var(--color-white);
+                color: var(--color-green);
+            }
+        }
+    }
+    &__images {
+        position: relative;
+        .main-section__image_front {
+            right: 88px;
+            left: -88px;
+            @include desktop {
+                left: 0;
+                right: 20px;
+            }
+        }
+    }
+}

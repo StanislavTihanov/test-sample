@@ -1,0 +1,21 @@
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-green: #343C2B;
+    --color-blue: #2735cd;
+
+    --border: 1px solid var(--color-black);
+    --border-radius: 10px;
+    --border-radius-small: 5px;
+
+    --shadow: 0px 0px 20px 0px var(--color-black);
+
+    --font-family-base: 'PlayfairDisplay', sans-serif;
+    --font-family-PlayfairDisplaySC: 'PlayfairDisplaySC', sans-serif;
+    --font-family-Poppins: 'Poppins', sans-serif;
+
+    --container-width: 1460px;
+    --container-padding-x: 10px;
+
+    --section-padding-y: 70px;
+}

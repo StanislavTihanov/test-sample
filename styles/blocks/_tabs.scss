@@ -1,0 +1,45 @@
+.tabs {
+    &__nav {
+        margin-bottom: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #E0E0E0;
+        @include mobile {
+            margin-bottom: 50px;
+            flex-direction: column;
+        }
+    }
+    &__nav_button {
+        width: 23%;
+        @include fluid-text(20, 28);
+        padding: 34px 0px;
+        @include mobile {
+            padding: 10px 0px;
+            display: block;
+            width: 100%;
+        }
+        &:not(:last-child) {
+            border-right: 1px solid var(--color-green);
+            @include mobile {
+                border-right: none;
+            }
+        }
+        &:nth-child(2) {
+            width: 60%;
+            @include mobile {
+                width: 100%;
+            }
+        }
+        &.active-tab  {
+            background-color: var(--color-green);
+            color: var(--color-white);
+        }
+    }
+    &__content {
+        display: none;
+        &.active-tab {
+            display: block;
+        }
+    }
+}

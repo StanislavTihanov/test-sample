@@ -1,0 +1,50 @@
+.main-section {
+    margin-bottom: 182px;
+    @include mobile {
+        margin-bottom: 0px;
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px 10px;
+        @include table {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__images {
+       position: relative;
+       flex-basis: 678px;
+    }
+    &__image_front {
+        position: absolute;
+        top: 88px;
+        left: 88px;
+        z-index: 3;
+        @include desktop {
+            top: 20px;
+            left: 20px;
+        }
+    }
+    &__info {
+        flex-basis: 496px;
+        text-align: center;
+        .title {
+            &::after {
+             width: 266px;
+             left: 50%;
+             transform: translate(-50%, -50%);
+            }
+         }
+    }
+    &__button {
+        max-width: 320px;
+        margin: auto;
+        .button {
+            &:hover {
+            background-color: var(--color-green);
+            }
+        }
+    }
+}

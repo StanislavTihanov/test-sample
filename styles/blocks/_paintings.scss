@@ -1,0 +1,31 @@
+.paintings {
+    background-color: var(--color-green);
+    &__body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 74px;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__info {
+        text-align: center;
+        color: var(--color-white);
+        max-width: 922px;
+        margin: auto;
+        .title {
+            &::after {
+                background-color: var(--color-white);
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    &__button {
+        .button {
+            color: var(--color-white);
+            border: 3px solid var(--color-white);
+        }
+    }
+}
